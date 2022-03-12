@@ -260,7 +260,11 @@ nav {
   width: 90%;
   @include flexbox();
   justify-content: space-evenly !important;
-
+  div {
+    margin: 0 0.5rem;
+    @include flexbox();
+    flex-direction: column;
+  }
   .avatar {
     width: 100px;
     height: 100px;
@@ -301,34 +305,24 @@ nav {
   }
 }
 
-// .leaderboard-profiles {
-//   width: 90%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   overflow: scroll;
-//   -ms-overflow-style: none;
-//   scrollbar-width: none;
-//   margin: 1rem 0.5rem;
-// }
-
-// .leaderboard-profiles::-webkit-scrollbar {
-//   display: none;
-// }
-// .leaderboard-profile-avatar {
-//   width: 50px;
-//   height: 50px;
-
-//   img {
-//     height: 100%;
-//     width: 100%;
-//     object-fit: cover;
-//     border-radius: 50%;
-//   }
-// }
+.leaderboard-profiles {
+  width: 95%;
+  min-height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: scroll;
+  padding: 0.5rem 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.leaderboard-profiles::-webkit-scrollbar {
+  display: none;
+}
 
 .profile_avatar_wrap {
   position: relative;
+  margin-right: 2rem;
 }
 
 .profile_avatar {
@@ -352,9 +346,52 @@ nav {
 
   circle {
     fill: none;
-    stroke: red;
+    stroke: rgba(255, 0, 98, 0.788);
     stroke-width: 3px;
     stroke-dasharray: 0;
     stroke-dashoffset: 110;
+  }
+}
+
+// =================//
+
+@media (max-width: 600px) {
+  .description-section {
+    .description {
+      h3 {
+        font-size: 1.5rem !important;
+      }
+    }
+    .icons {
+      a {
+        margin: 0 1rem !important;
+      }
+    }
+  }
+  .leaderboard-top {
+    flex-wrap: wrap;
+    div {
+      margin: 1rem auto;
+    }
+    .avatar {
+      width: 70px;
+      height: 70px;
+    }
+    .leaderboard-details {
+      h4 {
+        margin-top: 0.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      p {
+        margin: 0.1rem auto 1rem auto;
+      }
+    }
+    div:nth-child(2) {
+      .avatar {
+        width: 70px;
+        height: 70px;
+      }
+    }
   }
 }

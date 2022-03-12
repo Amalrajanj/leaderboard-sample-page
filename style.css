@@ -330,11 +330,112 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+}
+
+.leaderboard .leaderboard-info {
+  margin: 3rem auto;
+}
+
+.leaderboard-top {
+  margin: 4rem auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly !important;
+      -ms-flex-pack: space-evenly !important;
+          justify-content: space-evenly !important;
+}
+
+.leaderboard-top .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.leaderboard-top .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.leaderboard-top .leaderboard-details h4 {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.leaderboard-top .leaderboard-details p {
+  margin: 0.1rem auto 1rem auto;
+}
+
+.leaderboard-top .leaderboard-details button {
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.leaderboard-top div:nth-child(2) .avatar {
+  width: 120px;
+  height: 120px;
+}
+
+.profile_avatar_wrap {
+  position: relative;
+}
+
+.profile_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: greenyellow;
+}
+
+.profile_avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile_decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.profile_decoration circle {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+  stroke-dasharray: 0;
+  stroke-dashoffset: 110;
 }
 /*# sourceMappingURL=style.css.map */
